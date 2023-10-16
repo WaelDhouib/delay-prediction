@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import datetime as dt
 
-def edit_dataframe():
+def edit_dataframe(df):
     df['STD'] = df['STD'].map(lambda x: dt.datetime.strptime(x, '%Y-%m-%d %H:%M:%S'))
 
     df["DAY"] = ""
@@ -21,8 +21,10 @@ def edit_dataframe():
     df['STD'] = df['STD'].map(lambda x: x.replace(':',''))
     df['STD'] = pd.to_numeric(df['STD'])
 
+    df['STA'] = df['STA'].astype(str)
     df['STA'] = df['STA'].map(lambda x: x[-9:])
     df['STA'] = df['STA'].map(lambda x: x[:-3])
+    df['STA'] = df['STA'].map(lambda x: x.replace('.',''))
     df['STA'] = df['STA'].map(lambda x: x.replace(':',''))
     df['STA'] = pd.to_numeric(df['STA'])
 
@@ -39,4 +41,9 @@ def edit_dataframe():
 df = pd.read_csv("../../data/raw/train.csv")
 df = edit_dataframe(df)
 df.head()
-df.to_csv("../../data/interim/train.csv")
+df.to_csv("../../data/interim/train.csv", index=False)
+
+df = pd.read_csv("../../data/raw/test.csv")
+df = edit_dataframe(df)
+df.head()
+df.to_csv("../../data/interim/test.csv", index=False)

@@ -6,7 +6,7 @@ from sklearn.metrics import mean_squared_error
 from math import sqrt
 import joblib
 
-df = pd.read_csv("../../data/interim/train.csv")
+df = pd.read_csv("../../data/interim/train.csv", index_col=False)
 
 X = df.drop(['ID','target'], axis=1)
 y = df['target']
