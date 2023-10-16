@@ -1,7 +1,7 @@
-data_project
+Flight Delay Prediction
 ==============================
 
-This is a data project
+'Flight Delay Duration Prediction' was a challenge part of the AI Hack Tunisia event in 2022, it was made for Tunisair, the flag carrier airline of Tunisia.
 
 Project Organization
 ------------
@@ -54,4 +54,4 @@ Project Organization
 
 --------
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>.</small></p>
