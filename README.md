@@ -3,6 +3,8 @@ Flight Delay Prediction
 
 'Flight Delay Duration Prediction' was a challenge part of the AI Hack Tunisia event in 2022, it was made for Tunisair, the flag carrier airline of Tunisia.
 
+Link for the competition: https://zindi.africa/competitions/flight-delay-prediction-challenge
+
 Project Organization
 ------------
 
